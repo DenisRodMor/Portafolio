@@ -9,6 +9,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import {HttpClientModule} from '@angular/common/http'; //para realizar peticiones put, get, delete a Servidores Rest por ejemplo
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule //para realizar peticiones put, get, delete a Servidores Rest por ejemplo
   ],
   providers: [],
   bootstrap: [AppComponent]
