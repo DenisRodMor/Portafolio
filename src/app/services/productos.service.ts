@@ -6,9 +6,14 @@ import { Injectable } from '@angular/core';
 })
 export class ProductosService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.cargarProductos();
+   }
 
   private cargarProductos(){
+    this.http.get('https://angular-html-a9985-default-rtdb.firebaseio.com/productos_idx.json').subscribe((resp:any)=>{
 
+    console.log(resp);
+    });
   }
 }
